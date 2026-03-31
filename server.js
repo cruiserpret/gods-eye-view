@@ -946,6 +946,10 @@ app.post("/api/analyze", async (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.sendFile(path.join(process.cwd(), "public", "index.html"));
+});
+
 app.listen(PORT, () => {
   console.log(`God's Eye View running at http://localhost:${ PORT }`);
 });
