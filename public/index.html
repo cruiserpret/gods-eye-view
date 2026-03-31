@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>God's Eye View</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+
+  <div class="wrap">
+    <header>
+      <div class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+          <circle cx="12" cy="12" r="3"></circle>
+        </svg>
+      </div>
+      <h1>God's Eye View</h1>
+      <p class="sub">INSTAGRAM STORY SWARM INTELLIGENCE ENGINE</p>
+    </header>
+
+    <div class="card">
+      <div class="clabel">📸 Your Instagram Story</div>
+
+      <div class="fld">
+        <div class="uzone" id="uploadZone">
+          <input type="file" id="imgInput" accept="image/*" />
+          <div class="uico">🖼️</div>
+          <div class="utxt">Drop photo or <span>browse</span></div>
+          <div class="uhint">JPG · PNG · WEBP · max 5 MB</div>
+        </div>
+
+        <div class="pwrap" id="previewWrap">
+          <img id="previewImage" class="pimg" src="" alt="Preview" />
+          <button class="rmbtn" id="removeBtn" type="button">✕</button>
+          <div class="compbadge" id="compressBadge">⚙️ Compressing…</div>
+        </div>
+      </div>
+
+      <div class="row2">
+        <div class="fld">
+          <label for="song">🎵 Song Title & Artist</label>
+          <input type="text" id="song" placeholder="e.g. Espresso – Sabrina Carpenter" />
+        </div>
+
+        <div class="fld">
+          <label for="caption">✍️ Caption / Text Overlay</label>
+          <input type="text" id="caption" placeholder="e.g. golden hour hits different" />
+        </div>
+      </div>
+
+      <div class="fld">
+        <label for="context">💬 Optional Context</label>
+        <textarea id="context" placeholder="Trending vibes, aesthetic you're going for…"></textarea>
+      </div>
+
+      <button class="rbtn" id="runBtn" type="button">✦ Activate Swarm Intelligence</button>
+      <div class="err" id="errorBox"></div>
+      <div id="rawDebug"></div>
+    </div>
+
+    <section id="results">
+      <div class="stitle">Agent Reactions</div>
+      <div class="agrid" id="agentGrid"></div>
+      <div class="scard" id="summaryCard"></div>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
